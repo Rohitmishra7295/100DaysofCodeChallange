@@ -1,3 +1,8 @@
+/*Edge Case: Handles empty arrays and negative values gracefully.
+Time Complexity: O(n), as it iterates through the array once.
+Space Complexity: O(1), constant space usage.*/
+
+
 class Solution1 {
     
     public static int largest(int arr[]) {

@@ -1,7 +1,9 @@
 /*Edge Case: Handles empty arrays and negative values gracefully.
+
 Example Walkthrough:
 Example 1:
 Input: {1, 8, 7, 56, 90}
+
 
 Initialization:
 
@@ -16,18 +18,21 @@ Final result:
 Return max = 90.
 
  
-Check if the array is empty:
+Steps for an Optimal Solution:
 
-If yes, print a message and return a sentinel value (Integer.MIN_VALUE).
-Initialize max with the first element:
+Initial Setup:
+Start by initializing a variable (max) to hold the maximum value found in the array. Set it to the first element of the array, or in some cases, a very low value (like Integer.MIN_VALUE for large numbers).
 
-Set max to arr[0] to start the comparison.
-Iterate through the rest of the array:
+Edge Case Handling (Empty Array):
+Before proceeding to find the maximum value, check if the array is empty (arr.length == 0). If it's empty, print a message that the array is empty and terminate the function early. This ensures no errors occur during execution (such as trying to access arr[0] in an empty array).
 
-Compare each element (arr[i]) with max. If arr[i] > max, update max.
-Return max:
+Iterate through the Array:
+Traverse through the array starting from the second element (since the first element is used to initialize max).
 
-After finishing the loop, return the value stored in max as the largest element in the array.
+For each element, compare it with the current value of max. If the element is greater than max, update max with the new value.
+Output the Result:
+
+After the iteration is complete, print the max value, which will now contain the maximum element from the array.
 
 
 Time Complexity: O(n), because we make one pass through the array.

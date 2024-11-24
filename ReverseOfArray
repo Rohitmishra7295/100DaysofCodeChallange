@@ -1,4 +1,4 @@
-/*Step-wise Algorithm for Reversing an Array:
+Step-wise Algorithm for Reversing an Array:
 1.Initialize Pointers:
 
 *Set left = 0 (points to the first element of the array).
@@ -20,7 +20,7 @@
 4.The array will be reversed when the loop finishes.
 
 NOTE:
-Time Complexity: This algorithm runs in O(n) time, where n is the size of the array, as each element is swapped only once.*/
+Time Complexity: This algorithm runs in O(n) time, where n is the size of the array, as each element is swapped only once.
 
 
 

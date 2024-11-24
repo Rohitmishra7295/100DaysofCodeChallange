@@ -1,0 +1,60 @@
+/*Step-wise Algorithm for Reversing an Array:
+1.Initialize Pointers:
+
+*Set left = 0 (points to the first element of the array).
+
+*Set right = arr.length - 1 (points to the last element of the array).
+
+2.Swap Elements:
+
+*While left < right:
+
+1)Store the value of arr[left] in a temporary variable temp.
+2)Assign the value of arr[right] to arr[left].
+3)Assign the value of temp to arr[right].
+4)Increment left by 1 (left++).
+5)Decrement right by 1 (right--).
+
+3.Repeat the process until left is greater than or equal to right.
+
+4.The array will be reversed when the loop finishes.
+
+NOTE:
+Time Complexity: This algorithm runs in O(n) time, where n is the size of the array, as each element is swapped only once.*/
+
+
+
+
+class ReverseArray {
+    // Method to reverse the array
+    public static void revArr(int[] arr) {
+        int left = 0; // Left pointer, starting at the first element
+        int right = arr.length - 1; // Right pointer, starting at the last element
+
+        // While left pointer is less than right pointer, continue swapping
+        while (left < right) {
+            // Swap the elements at the left and right pointers
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            
+            // Move the pointers closer to the center
+            left++;
+            right--;
+        }
+    }
+
+    // Main method to test the array reversal
+    public static void main(String[] args) {
+        int arr1[] = {1, 1, 1, 1, 1}; // Test array 1
+        int arr2[] = {1, 3, 5, 7, 0, 90, 1}; // Test array 2
+
+        // Reverse and print the first array
+        revArr(arr1);
+        System.out.println(java.util.Arrays.toString(arr1)); // Output the reversed array
+        
+        // Reverse and print the second array
+        revArr(arr2);
+        System.out.println(java.util.Arrays.toString(arr2)); // Output the reversed array
+    }
+}
